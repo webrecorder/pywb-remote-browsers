@@ -23,7 +23,7 @@ To use:
 
 The default UI provides a set of controls for entering URL, timestamp, choosing a browser, and choosing a collection. The system will then start the selected remote browser connected to that pywb collection in an iframe.
 
-<img src="assets/screenshot1.png"></img>
+<img height="300px" src="assets/screenshot1.png"></img>
 
 
 ### Viewer UI
