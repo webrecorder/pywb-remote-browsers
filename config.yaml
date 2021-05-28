@@ -1,0 +1,14 @@
+debug: true
+
+proxy:
+  coll: all
+  enable_content_rewrite: false
+  enable_banner: false
+  enable_wombat: true
+
+  ca_name: pywb OWT CA
+  #ca_file_cache: ./proxy-certs/pywb-ca.pem
+
+#collections:
+#  live: $live
+
