@@ -12,8 +12,8 @@ To use:
 
 3) Pull one or more Browser Docker Images from: https://hub.docker.com/r/oldwebtoday/chrome/tags or https://hub.docker.com/r/oldwebtoday/firefox/tags
 
-(See below for more info).
-
+   **To use a browser with Flash Support, `chrome:84` is recommended., eg. `docker pull oldwebtoday/chrome:84`** 
+   (See below for more info).
 
 4) Run `docker-compose up -d` to start.
 
@@ -37,7 +37,16 @@ The Browser Images are downloaded manually, to allow users to choose which brows
 
 Browsers can be obtained from the oldwebtoday browser repos including: https://hub.docker.com/r/oldwebtoday/chrome/tags and https://hub.docker.com/r/oldwebtoday/firefox/tags.
 
-At least one browser must be downloaded for the system to work, eg. `docker pull oldwebtoday/chrome:88`.
+At least one browser must be downloaded for the system to work, eg. `docker pull oldwebtoday/chrome:84`.
+
+## Flash and Java support
+
+A key benefit of the remote browser system is to run older browsers, such as those supporting Flash and Java.
+
+Here are the latest version of Chrome and Firefox that we have available that support Flash and Java:
+
+- Flash: Chrome 84 (`chrome:84`) or Firefox 68 (`firefox:68`)
+- Java: Firefox 49 (`firefox:49`)
 
 Additional browsers will (hopefully) be added in the future!
 
