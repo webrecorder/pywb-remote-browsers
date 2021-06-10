@@ -2,11 +2,13 @@ version: '3.3'
 
 services:
     shepherd:
-        image: oldwebtoday/shepherd:1.2.5-beta.0
+        image: oldwebtoday/shepherd:1.2.5-beta.1
         environment:
             - BROWSER_NET=pywb-remote-browsers_browsers
             - PROXY_HOST=pywb
             - PROXY_PORT=8080
+            # set to 1 to allow recording
+            - ALLOW_RECORD=0
 
         depends_on:
             - redis
@@ -25,7 +27,7 @@ services:
             - default
 
     pywb:
-        image: webrecorder/pywb
+        image: webrecorder/pywb:2.6.0b0
         networks:
             - browsers
 

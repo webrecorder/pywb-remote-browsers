@@ -7,8 +7,12 @@ proxy:
   enable_wombat: true
 
   ca_name: pywb OWT CA
-  #ca_file_cache: ./proxy-certs/pywb-ca.pem
 
-#collections:
-#  live: $live
+# enable for recording
+# below can be commented out if not recording
+recorder: live
 
+collections:
+  live: $live
+
+autoindex: 30

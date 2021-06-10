@@ -69,3 +69,15 @@ This port must be accessible to if connecting remotely.
 
 TODO Add docs on configuring over SSL via nginx proxying.
 
+## Recording Mode
+
+The system also supports recording or capturing into new collections, using the [pywb Recording mode](https://pywb.readthedocs.io/en/latest/manual/configuring.html#recording-mode)
+
+To enable recording mode, set `ALLOW_RECORD=1` in the docker-compose.yaml
+
+When enabled, the UI will show an recording checkbox. If checked, a new browser will be started in recording mode.
+
+This can be used to record existing content, such as Flash or even Java content, using an older browser.
+
+
+

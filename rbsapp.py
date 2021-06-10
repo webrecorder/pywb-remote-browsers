@@ -22,12 +22,16 @@ class RBSProxyApp(FrontEndApp):
     def proxy_route_request(self, url, environ):
         try:
             key = 'up:' + environ['REMOTE_ADDR']
-            timestamp = self.redis.hget(key, 'timestamp') or timestamp_now()
-            coll = self.redis.hget(key, 'coll')
-            print(self.redis.hgetall(key))
-            #environ['pywb_redis_key'] = key
-            print('COLL', coll)
+
+            timestamp, coll, mode = self.redis.hmget(key, ['timestamp', 'coll', 'mode'])
+            print(timestamp, coll, mode)
+            timestamp = timestamp or timestamp_now()
+
             environ['pywb_proxy_default_timestamp'] = timestamp
+            if mode == 'record':
+                coll += '/record'
+
+            print('/{0}/bn_/'.format(coll) + url)
             return '/{0}/bn_/'.format(coll) + url
         except Exception as e:
             traceback.print_exc()
